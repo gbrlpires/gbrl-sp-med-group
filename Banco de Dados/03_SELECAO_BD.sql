@@ -17,6 +17,9 @@
 	SELECT * FROM MEDICOS
 
 	SELECT * FROM PRONTUARIOS_CONSULTAS
+
+	SELECT * FROM MEDICOS_CLINICAS
+
 	
 	--Corrigindo e atualizando Nome de especialidade 'Otorrinolaringologia'
 	UPDATE ESPECIALIDADES SET EspecialidadeNome = 'Otorrinolaringologia' WHERE EspecialidadeId = 3

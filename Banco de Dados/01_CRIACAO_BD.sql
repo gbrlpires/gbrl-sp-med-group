@@ -130,9 +130,18 @@ CREATE TABLE CONSULTAS (
 	ObservacoesConsulta TEXT
 );
 
+--Criando tabela de relação entre as consultas e prontuário 'anexado'
 CREATE TABLE PRONTUARIOS_CONSULTAS (
 	IdProntuario INT FOREIGN KEY REFERENCES PRONTUARIOS(ProntuarioId)
 	,
 	IdConsulta INT FOREIGN KEY REFERENCES CONSULTAS(ConsultaId)
 );
+
+--Criando tabela de relação entre os médicos e as clinicas em que atendem
+CREATE TABLE MEDICOS_CLINICAS (
+	IdMedico INT FOREIGN KEY REFERENCES MEDICOS(MedicoId)
+	,
+	IdClinica INT FOREIGN KEY REFERENCES CLINICAS(ClinicaId)
+);
+
 
