@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Authentication.JwtBearer">
+      <HintPath>..\..\..\..\senai-1s2019-t2-sprint-2-backend\senai-backend-inlock\Bibliotecas\microsoft.aspnetcore.authentication.jwtbearer\2.1.1\lib\netstandard2.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Design">
+      <HintPath>..\..\..\..\..\..\..\Desktop\Bibliotecas\microsoft.entityframeworkcore.design\2.1.1\lib\net461\Microsoft.EntityFrameworkCore.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.SqlServer">
+      <HintPath>..\..\..\..\..\..\..\Desktop\Bibliotecas\microsoft.entityframeworkcore.sqlserver\2.1.1\lib\netstandard2.0\Microsoft.EntityFrameworkCore.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlClient">
+      <HintPath>..\..\..\..\senai-1s2019-t2-sprint-2-backend\senai-backend-inlock\Bibliotecas\system.data.sqlclient\4.6.0\lib\netcoreapp2.1\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel.Tokens.Jwt">
+      <HintPath>..\..\..\..\senai-1s2019-t2-sprint-2-backend\senai-backend-inlock\Bibliotecas\system.identitymodel.tokens.jwt\5.4.0\lib\netstandard2.0\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
