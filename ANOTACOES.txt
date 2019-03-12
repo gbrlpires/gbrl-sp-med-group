@@ -1,0 +1,23 @@
+--Simplificar Banco de Dados
+
+prontuario uma coisa só
+remover metodos 
+medico tem uma clinica só
+genero pode tirar se quiser
+consulta não precisa da clinica
+so haverá vinculo entre um médico e um paciente
+
+--Colocar no trello
+Criar Pasta Interfaces
+Criar Pasta Repositories
+Inserir Data Annotations
+	Clinicas
+	Consultas
+	Medicos
+	Pacientes
+	StatusConsultas
+	Usuarios
+	UsuariosTipos
+
+
+--Conferir se Data Annotations de DataType Time está correto
