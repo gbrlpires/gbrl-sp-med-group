@@ -15,28 +15,48 @@ namespace SpMedGroup.WebApi.Controllers
     [ApiController]
     public class UsuariosController : ControllerBase
     {
-        public IUsuarioRepository UsuarioRepository { get; set; }
+        // conheço as ações
+        private IUsuarioRepository UsuarioRepository { get; set; }
 
         public UsuariosController()
         {
+            // tem acesso as implementações
             UsuarioRepository = new UsuarioRepository();
         }
 
         [HttpPost]
+        // quem eu recebo para cadastrar
         public IActionResult Post(Usuarios usuario)
         {
             try
             {
-                Cadastrar();
+                // chamo a interface, e envio o que eu quiser
+                UsuarioRepository.Cadastrar(usuario);
                 return Ok();
             }
-            catch (Exception)
+            catch (System.Exception ex)
             {
 
                 return BadRequest();
             }
         }
 
+        [HttpGet]
+        public IActionResult Get()
+        {
+            try
+            {
+                //Essa request aqui ta bem errada tb, arrumar
+                UsuarioRepository.Listar();
+                return Ok();
+            }
+            catch (System.Exception ex)
+            {
+
+                return BadRequest();
+            }
+
+        }
         
     }
 }

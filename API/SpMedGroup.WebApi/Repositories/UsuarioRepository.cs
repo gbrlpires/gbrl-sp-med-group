@@ -17,5 +17,17 @@ namespace SpMedGroup.WebApi.Repositories
                 ctx.SaveChanges();
             }
         }
+
+        //Aqui tá bem errado, arrumar
+        public List<Usuarios> Listar()
+        {
+            List<Usuarios> UsuariosLista = new List<Usuarios>();
+
+            using (SpMedGroupContext ctx = new SpMedGroupContext())
+            {
+                ctx.Usuarios.ToList();
+            }
+            return UsuariosLista;
+        }
     }
 }

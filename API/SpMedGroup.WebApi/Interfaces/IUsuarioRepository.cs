@@ -13,5 +13,9 @@ namespace SpMedGroup.WebApi.Interfaces
         /// </summary>
         /// <param name="usuario"></param>
         void Cadastrar(Usuarios usuario);
+
+        List<Usuarios> Listar();
+        
+
     }
 }

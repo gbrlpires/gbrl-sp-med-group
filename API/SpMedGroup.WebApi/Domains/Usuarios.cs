@@ -20,6 +20,7 @@ namespace SpMedGroup.WebApi.Domains
         [Required(ErrorMessage = "Informe uma senha")]
         public string Senha { get; set; }
 
+        [Required(ErrorMessage = "Informe o identificador de usuário")]
         public int? IdUsuariosTipos { get; set; }
         public UsuariosTipos IdUsuariosTiposNavigation { get; set; }
         public ICollection<Medicos> Medicos { get; set; }
