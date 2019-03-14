@@ -18,15 +18,16 @@ namespace SpMedGroup.WebApi.Repositories
             }
         }
 
-        //Aqui tá bem errado, arrumar
+        //Não sei se é o melhor jeito mas eu fiz sozinha <3
         public List<Usuarios> Listar()
         {
             List<Usuarios> UsuariosLista = new List<Usuarios>();
 
             using (SpMedGroupContext ctx = new SpMedGroupContext())
             {
-                ctx.Usuarios.ToList();
+                UsuariosLista = ctx.Usuarios.ToList();
             }
+
             return UsuariosLista;
         }
     }

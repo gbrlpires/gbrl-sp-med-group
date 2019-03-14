@@ -45,10 +45,8 @@ namespace SpMedGroup.WebApi.Controllers
         public IActionResult Get()
         {
             try
-            {
-                //Essa request aqui ta bem errada tb, arrumar
-                UsuarioRepository.Listar();
-                return Ok();
+            {             
+                return Ok(UsuarioRepository.Listar());
             }
             catch (System.Exception ex)
             {
