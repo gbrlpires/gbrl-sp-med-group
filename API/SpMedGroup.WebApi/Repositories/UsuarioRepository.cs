@@ -9,6 +9,19 @@ namespace SpMedGroup.WebApi.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
+        public void Atualizar(int id, Usuarios usuario)
+        {
+            using (SpMedGroupContext ctx = new SpMedGroupContext())
+            {
+                //falta tratar caso não ache valor do Id
+                Usuarios usuarioBuscado = ctx.Usuarios.Find(id);
+                usuarioBuscado.UsuarioId = usuario.UsuarioId;
+                ctx.Usuarios.Update(usuarioBuscado);
+                //Meu usuario aqui fica com UsuarioId = 0 e eu não entendi o motivo
+                ctx.SaveChanges();
+            }
+        }
+
         public void Cadastrar(Usuarios usuario)
         {
             using (SpMedGroupContext ctx = new SpMedGroupContext())
@@ -18,7 +31,7 @@ namespace SpMedGroup.WebApi.Repositories
             }
         }
 
-        //Não sei se é o melhor jeito mas eu fiz sozinha <3
+        //Não sei se é o melhor jeito mas eu fiz sozinha \o/
         public List<Usuarios> Listar()
         {
             List<Usuarios> UsuariosLista = new List<Usuarios>();

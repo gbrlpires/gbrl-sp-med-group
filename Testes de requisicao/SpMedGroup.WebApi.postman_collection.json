@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "db33fa1c-9079-4ad4-b7b2-b811a1b1556a",
+		"name": "SpMedGroup.WebApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastrar Usuário",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Email\": \"rita@email.com\",\n\t\"Senha\": \"12345\",\n\t\"IdUsuariosTipos\": 2\n\n}"
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Usuarios",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Usuários",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Usuarios",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Usuário",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \n        \"email\": \"marilene@email.com\",\n        \"senha\": \"1236\",\n        \"idUsuariosTipos\": 2,\n        \"idUsuariosTiposNavigation\": null,\n        \"medicos\": [],\n        \"pacientes\": []\n    }"
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Usuarios/10",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Usuarios",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -32,7 +32,10 @@ namespace SpMedGroup.WebApi.Controllers
             {
                 // chamo a interface, e envio o que eu quiser
                 UsuarioRepository.Cadastrar(usuario);
-                return Ok();
+                return Ok(new
+                {
+                    mensagem = "Usuário cadastrado com sucesso"
+                });
             }
             catch (System.Exception ex)
             {
@@ -45,7 +48,7 @@ namespace SpMedGroup.WebApi.Controllers
         public IActionResult Get()
         {
             try
-            {             
+            {
                 return Ok(UsuarioRepository.Listar());
             }
             catch (System.Exception ex)
@@ -54,6 +57,25 @@ namespace SpMedGroup.WebApi.Controllers
                 return BadRequest();
             }
 
+        }
+
+
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, Usuarios usuario)
+        {
+            try
+            {
+                UsuarioRepository.Atualizar(id, usuario);
+                return Ok(new
+                {
+                    mensagem = "Dados atualizados com sucesso"
+                });
+            }
+
+            catch (System.Exception ex)
+            {
+                return BadRequest();
+            }
         }
         
     }

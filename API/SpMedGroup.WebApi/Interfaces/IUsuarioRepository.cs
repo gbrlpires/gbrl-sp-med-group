@@ -15,7 +15,8 @@ namespace SpMedGroup.WebApi.Interfaces
         void Cadastrar(Usuarios usuario);
 
         List<Usuarios> Listar();
-        
+
+        void Atualizar(int id, Usuarios usuario);
 
     }
 }
