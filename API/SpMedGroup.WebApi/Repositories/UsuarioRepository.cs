@@ -15,9 +15,9 @@ namespace SpMedGroup.WebApi.Repositories
             {
                 //falta tratar caso não ache valor do Id
                 Usuarios usuarioBuscado = ctx.Usuarios.Find(id);
-                usuarioBuscado.UsuarioId = usuario.UsuarioId;
+                             
+                usuarioBuscado.Email = usuario.Email;
                 ctx.Usuarios.Update(usuarioBuscado);
-                //Meu usuario aqui fica com UsuarioId = 0 e eu não entendi o motivo
                 ctx.SaveChanges();
             }
         }
