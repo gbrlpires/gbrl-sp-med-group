@@ -18,5 +18,9 @@ namespace SpMedGroup.WebApi.Interfaces
 
         void Atualizar(int id, Usuarios usuario);
 
+        void Deletar(int id);
+
+        Usuarios BuscarPorId(int id);
+
     }
 }

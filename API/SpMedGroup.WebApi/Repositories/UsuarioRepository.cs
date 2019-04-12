@@ -1,9 +1,9 @@
 ﻿using SpMedGroup.WebApi.Domains;
 using SpMedGroup.WebApi.Interfaces;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+
+
 
 namespace SpMedGroup.WebApi.Repositories
 {
@@ -13,7 +13,7 @@ namespace SpMedGroup.WebApi.Repositories
         {
             using (SpMedGroupContext ctx = new SpMedGroupContext())
             {
-                //falta tratar caso não ache valor do Id
+                //falta tratar caso não ache valor do Id?
                 Usuarios usuarioBuscado = ctx.Usuarios.Find(id);
                              
                 usuarioBuscado.Email = usuario.Email;
@@ -42,6 +42,29 @@ namespace SpMedGroup.WebApi.Repositories
             }
 
             return UsuariosLista;
+        }
+
+        public void Deletar(int id)
+        {
+            using (SpMedGroupContext ctx = new SpMedGroupContext())
+            {
+                Usuarios usuarioBuscado = ctx.Usuarios.Find(id);
+                ctx.Usuarios.Remove(usuarioBuscado);
+                ctx.SaveChanges();
+            }
+        }
+        
+        public Usuarios BuscarPorId(int id)
+        {
+            Usuarios usuario = new Usuarios();
+
+            using (SpMedGroupContext ctx = new SpMedGroupContext())
+            {
+                usuario = ctx.Usuarios.Find(id);
+            }
+     
+            return usuario;
+
         }
     }
 }

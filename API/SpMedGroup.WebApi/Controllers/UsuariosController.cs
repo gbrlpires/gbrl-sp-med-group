@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-
+﻿
 using Microsoft.AspNetCore.Mvc;
 using SpMedGroup.WebApi.Domains;
 using SpMedGroup.WebApi.Interfaces;
@@ -66,6 +61,7 @@ namespace SpMedGroup.WebApi.Controllers
         {
             try
             {
+
                 UsuarioRepository.Atualizar(id, usuario);
                 return Ok(new
                 {
@@ -78,6 +74,41 @@ namespace SpMedGroup.WebApi.Controllers
                 return BadRequest();
             }
         }
-        
+
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                UsuarioRepository.Deletar(id);
+                return Ok(new
+                {
+                    mensagem = "Usuário Removido com sucesso"
+                });
+            }
+
+            catch (System.Exception ex)
+            {
+                return BadRequest();
+            }
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult BuscarPorId(int id)
+        {
+
+            try
+            {
+                return Ok(UsuarioRepository.BuscarPorId(id));
+
+            }
+            catch (System.Exception)
+            {
+
+                return NotFound();
+            }
+        }
+
     }
 }
