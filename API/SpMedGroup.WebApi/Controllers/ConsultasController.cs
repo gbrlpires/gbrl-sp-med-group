@@ -37,6 +37,37 @@ namespace SpMedGroup.WebApi.Controllers
             }
         }
 
+        [HttpGet]
+        public IActionResult ListarConsulta()
+        {
+            try
+            {
+                return Ok(ConsultaRepository.ListarConsulta());
+            }
+            catch (System.Exception ex)
+            {
+
+                return BadRequest();
+            }
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult AtualizarStatusConsulta(int id, Consultas consulta)
+        {
+            try
+            {
+                ConsultaRepository.AtualizarStatusConsulta(id, consulta);
+                return Ok(new
+                {
+                    mensagem = "Status da consulta atualizado com sucesso"
+                });
+            }
+            catch (System.Exception)
+            {
+
+                return BadRequest();
+            }
+        }
 
     }
 }

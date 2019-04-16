@@ -13,7 +13,6 @@ namespace SpMedGroup.WebApi.Repositories
         {
             using (SpMedGroupContext ctx = new SpMedGroupContext())
             {
-                //falta tratar caso não ache valor do Id?
                 Usuarios usuarioBuscado = ctx.Usuarios.Find(id);
                              
                 usuarioBuscado.Email = usuario.Email;
@@ -31,7 +30,6 @@ namespace SpMedGroup.WebApi.Repositories
             }
         }
 
-        //Não sei se é o melhor jeito mas eu fiz sozinha \o/
         public List<Usuarios> Listar()
         {
             List<Usuarios> UsuariosLista = new List<Usuarios>();

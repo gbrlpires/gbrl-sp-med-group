@@ -19,11 +19,10 @@ namespace SpMedGroup.WebApi.Domains
         public DateTime DataConsulta { get; set; }
 
         [Required(ErrorMessage = "Informe um horário para a consulta")]
-        //Conferir Datatype.Time - serve para mostrar apenas a hora?
         [DataType(DataType.Time)]
         public TimeSpan HoraConsulta { get; set; }
 
-        public int? IdConsultaStatus { get; set; }
+        public int? IdConsultaStatus { get; set; } = 5; //Default para IdConsultaStatus = Agendada
         public string ObservacoesConsulta { get; set; }
 
         public Medicos IdConsultaMedicoNavigation { get; set; }
