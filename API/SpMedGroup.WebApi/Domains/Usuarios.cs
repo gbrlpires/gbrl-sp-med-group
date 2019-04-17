@@ -18,6 +18,7 @@ namespace SpMedGroup.WebApi.Domains
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Informe uma senha")]
+        [StringLength(25, MinimumLength = 6, ErrorMessage = "A senha a ser cadastrada deve conter no mínimo 6 caracteres")]
         public string Senha { get; set; }
 
         [Required(ErrorMessage = "Informe o identificador de usuário")]
