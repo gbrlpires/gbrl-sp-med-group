@@ -1,8 +1,10 @@
-﻿using SpMedGroup.WebApi.Domains;
+﻿using Microsoft.AspNetCore.Http;
+using SpMedGroup.WebApi.Domains;
 using SpMedGroup.WebApi.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -45,6 +47,23 @@ namespace SpMedGroup.WebApi.Repositories
             return ConsultasLista;
         }
 
+        public List<Consultas> ListarConsultasMedico(int id)
+        {
+            List<Consultas> ConsultasListaMedico = new List<Consultas>();
 
+            using (SpMedGroupContext ctx = new SpMedGroupContext())
+            {
+                int medicoId = Convert.ToInt32.(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
+
+                ctx.Usuarios.Find(medicoId);
+                ConsultasListaMedico = ctx.Consultas.ToList();
+            }
+            return ConsultasListaMedico;
+        }
+
+        public List<Consultas> ListarConsultasPaciente(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

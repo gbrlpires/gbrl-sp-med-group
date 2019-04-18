@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SpMedGroup.WebApi.Domains;
 using SpMedGroup.WebApi.Interfaces;
@@ -20,6 +21,7 @@ namespace SpMedGroup.WebApi.Controllers
             UsuarioRepository = new UsuarioRepository();
         }
 
+        [Authorize(Roles = "ADMINISTRADOR")]
         [HttpPost]
         // quem eu recebo para cadastrar
         public IActionResult Post(Usuarios usuario)
@@ -40,6 +42,7 @@ namespace SpMedGroup.WebApi.Controllers
             }
         }
 
+        [Authorize(Roles = "ADMINISTRADOR")]
         [HttpGet]
         public IActionResult Get()
         {
@@ -55,7 +58,7 @@ namespace SpMedGroup.WebApi.Controllers
 
         }
 
-
+        [Authorize(Roles = "ADMINISTRADOR")]
         [HttpPut("{id}")]
         public IActionResult Put(int id, Usuarios usuario)
         {
@@ -75,7 +78,7 @@ namespace SpMedGroup.WebApi.Controllers
             }
         }
 
-
+        [Authorize(Roles = "ADMINISTRADOR")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -94,6 +97,7 @@ namespace SpMedGroup.WebApi.Controllers
             }
         }
 
+        [Authorize(Roles = "ADMINISTRADOR")]
         [HttpGet("{id}")]
         public IActionResult BuscarPorId(int id)
         {

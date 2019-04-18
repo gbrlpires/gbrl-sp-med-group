@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SpMedGroup.WebApi.Domains;
 using SpMedGroup.WebApi.Interfaces;
 using SpMedGroup.WebApi.Repositories;
@@ -18,7 +19,7 @@ namespace SpMedGroup.WebApi.Controllers
             ConsultaRepository = new ConsultaRepository();
         }
 
-
+        [Authorize(Roles = "ADMINISTRADOR")]
         [HttpPost]
         public IActionResult AgendarConsulta(Consultas consulta)
         {
@@ -37,6 +38,7 @@ namespace SpMedGroup.WebApi.Controllers
             }
         }
 
+        [Authorize(Roles = "ADMINISTRADOR")]
         [HttpGet]
         public IActionResult ListarConsulta()
         {
@@ -51,6 +53,7 @@ namespace SpMedGroup.WebApi.Controllers
             }
         }
 
+        [Authorize(Roles = "ADMINISTRADOR")]
         [HttpPut("{id}")]
         public IActionResult AtualizarStatusConsulta(int id, Consultas consulta)
         {
@@ -68,6 +71,22 @@ namespace SpMedGroup.WebApi.Controllers
                 return BadRequest();
             }
         }
+
+        [HttpGet]
+        public IActionResult ListarConsultaMedico(int id)
+        {
+            try
+            {
+                return Ok(ConsultasRepository.ListarConvitesMedico())
+            }
+            catch (System.Exception)
+            {
+
+                throw;
+            }
+        }
+
+
 
     }
 }

@@ -13,5 +13,11 @@ namespace SpMedGroup.WebApi.Interfaces
         List<Consultas> ListarConsulta();
 
         void AtualizarStatusConsulta(int id, Consultas consulta);
+
+        List<Consultas> ListarConsultasPaciente(int id);
+
+        List<Consultas> ListarConsultasMedico(int id);
+
+
     }
 }
