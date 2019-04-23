@@ -1,0 +1,26 @@
+.header {
+    height: 64px;
+    background: #1B8DED;
+}
+
+/* .header__img {
+    width: 190px;
+    height: 100%;
+    display: inline-block;
+    margin: 0 15px 0 0;
+} */
+
+.navbar__list {
+    display: none;
+}
+
+.navbar__list-item {
+    display: inline;
+    padding: 0 12px; 
+      
+}
+
+.navbar__list-item a {
+    padding-bottom: 8px;   
+}
+

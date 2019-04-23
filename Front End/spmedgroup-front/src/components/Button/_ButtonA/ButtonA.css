@@ -1,4 +1,11 @@
 .btn--a {
     background-color:white;
     color: #1B8DED;
+    border: solid 1px #1B8DED; /*temporario*/
+}
+
+.btn--a:hover {
+    background-color:#1B8DED;
+    color: white;
+    outline: solid 3px white; /*temporario*/
 }
