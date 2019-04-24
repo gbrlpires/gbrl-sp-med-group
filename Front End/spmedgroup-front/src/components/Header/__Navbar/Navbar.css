@@ -1,0 +1,23 @@
+.navbar__list {
+    display: none;
+}
+
+.navbar__list-item {
+    display: inline;
+    padding: 0 12px; 
+      
+}
+
+.navbar__list-item a {
+    padding-bottom: 8px;   
+}
+
+
+/* @media only screen and (min-width: 768px) {
+    
+    .navbar__list {
+        display: block;
+    }
+    
+
+} */

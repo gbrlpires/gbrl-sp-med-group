@@ -5,14 +5,9 @@ import '../../assets/reset.css';
 import '../../assets/base.css';
 import '../../assets/position.css';
 
-import '../../components/Button/Button.css';
-import '../../components/Button/_ButtonB/ButtonB.css';
-import '../../components/Button/_ButtonA/ButtonA.css';
-import '../../components/Navbar/Navbar.css';
-
 import ButtonB from '../../components/Button/_ButtonB/ButtonB';
 import ButtonA from '../../components/Button/_ButtonA/ButtonA';
-import Navbar from '../../components/Navbar/Navbar';
+import Header from '../../components/Header/Header';
 
 
 class App extends Component {
@@ -20,7 +15,7 @@ class App extends Component {
     return (
       <div className="App">
         <div>
-            <Navbar />
+            <Header/>
             <ButtonB />
             <ButtonA />
 

@@ -1,0 +1,27 @@
+.header-menu-hamburger {
+    display: block;
+    width: 50px;
+    height: 4px;
+    position: absolute;
+    top: 45%;
+    right: 10%;
+    background: white;
+}
+
+.header-menu-hamburger::before,
+.header-menu-hamburger::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: absolute;
+}
+
+.header-menu-hamburger::before {
+    top: -14px;
+}
+
+.header-menu-hamburger::after {
+    bottom: -14px;
+}
