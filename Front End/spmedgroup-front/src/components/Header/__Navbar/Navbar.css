@@ -1,23 +1,31 @@
 .navbar__list {
     display: none;
+    text-transform: uppercase;
+    font-size: .8em;
 }
 
 .navbar__list-item {
     display: inline;
-    padding: 0 12px; 
+    padding: 0 20px; 
       
 }
 
 .navbar__list-item a {
-    padding-bottom: 8px;   
+    padding-bottom: 8px; 
+    color: white;  
+}
+
+.navbar__list-item a:hover {
+    border-bottom: solid 2px #28F2D8;  
 }
 
 
-/* @media only screen and (min-width: 768px) {
+
+@media only screen and (min-width: 768px) {
     
     .navbar__list {
         display: block;
     }
     
 
-} */
+}

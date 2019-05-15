@@ -1,0 +1,28 @@
+.status-bar {
+    color: var(--text-color);
+}
+
+.status-bar-container {
+    border-bottom: solid 1px var(--border-color);
+    padding: 2% 0 10px 0 ;
+}
+
+.status-bar-flexbox > * {
+    margin-left: 2%;
+}
+
+.status-bar__img {
+    width: 50px;
+    height: auto;
+    display: block;
+}
+
+.status-bar__title {
+    flex-grow: 1;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+
+

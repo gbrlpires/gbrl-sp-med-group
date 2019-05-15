@@ -4,8 +4,8 @@ import logo from '../../assets/img/spmed-logo.png';
 import './Header.css';
 import '../../assets/position.css';
 
-import NavbarMobile from '../NavbarMobile/NavbarMobile';
-import Navbar from '../Navbar/Navbar'
+import NavbarMobile from './__NavbarMobile/NavbarMobile';
+import Navbar from './__Navbar/Navbar'
 
 function Header() {
   return(

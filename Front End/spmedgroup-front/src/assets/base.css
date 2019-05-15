@@ -5,3 +5,10 @@ body {
 .wrapper {
     padding: 20px 6%;
 }
+
+/* Variables */
+:root {
+    --border-color: #CCCCCC;
+    --text-color: #666666;
+}
+

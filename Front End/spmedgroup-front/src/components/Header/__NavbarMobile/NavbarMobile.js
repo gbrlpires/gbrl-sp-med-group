@@ -9,7 +9,7 @@ function NavbarMobile() {
   return(
         <nav className="navbar">
             <Hamburger />
-            <Navbar />
+            {/* <Navbar /> */}
         </nav>
    
       
