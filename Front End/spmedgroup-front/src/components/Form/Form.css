@@ -22,3 +22,8 @@ label {
     text-align: left;
     font-size: 1em;
 }
+
+.form__title {
+    font-size: 1.5em;
+    color: var(--text-color);
+}

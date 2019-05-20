@@ -9,6 +9,8 @@ import ButtonB from '../../components/Button/_ButtonB/ButtonB';
 import ButtonA from '../../components/Button/_ButtonA/ButtonA';
 import Header from '../../components/Header/Header';
 import StatusBar from '../../components/StatusBar/StatusBar';
+import CadastrarPaciente from '../../components/Form/__CadastrarPaciente/CadastrarPaciente';
+
 
 
 class App extends Component {
@@ -20,6 +22,7 @@ class App extends Component {
             <StatusBar />
             <ButtonB />
             <ButtonA />
+            <CadastrarPaciente />
 
         </div>
       </div>
