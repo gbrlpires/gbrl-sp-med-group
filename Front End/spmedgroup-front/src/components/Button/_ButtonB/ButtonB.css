@@ -6,5 +6,5 @@
 .btn--b:hover {
     background-color:white;
     color: #28F2D8;
-    outline: solid 3px #28F2D8; /*temporario*/
+    outline: solid 3px #28F2D8;
 }
