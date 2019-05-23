@@ -53,9 +53,10 @@ namespace SpMedGroup.WebApi.Repositories
 
             using (SpMedGroupContext ctx = new SpMedGroupContext())
             {
-                int medicoId = Convert.ToInt32.(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
+                //int medicoId = Convert.ToInt32.(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
 
-                ctx.Usuarios.Find(medicoId);
+                //ctx.Usuarios.Find(medicoId);
+                ctx.Usuarios.Find(id);
                 ConsultasListaMedico = ctx.Consultas.ToList();
             }
             return ConsultasListaMedico;

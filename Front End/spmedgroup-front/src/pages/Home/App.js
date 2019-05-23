@@ -20,8 +20,6 @@ class App extends Component {
         <div>
             <Header/>
             <StatusBar />
-            <ButtonB />
-            <ButtonA />
             <CadastrarPaciente />
 
         </div>

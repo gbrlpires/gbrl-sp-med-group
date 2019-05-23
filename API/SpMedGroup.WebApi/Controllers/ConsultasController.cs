@@ -72,12 +72,12 @@ namespace SpMedGroup.WebApi.Controllers
             }
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public IActionResult ListarConsultaMedico(int id)
         {
             try
             {
-                return Ok(ConsultasRepository.ListarConvitesMedico())
+                return Ok(ConsultaRepository.ListarConsultasMedico(id));
             }
             catch (System.Exception)
             {

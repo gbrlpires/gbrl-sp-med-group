@@ -4,7 +4,7 @@ import './Hamburger.css'
 
 function Hamburger() {
     return(
-        <span class="navbar__hamburger"></span>     
+        <span className="navbar__hamburger"></span>     
   );
   }
   
