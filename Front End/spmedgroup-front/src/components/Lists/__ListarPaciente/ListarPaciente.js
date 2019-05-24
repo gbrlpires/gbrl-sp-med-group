@@ -1,16 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import '../List.css';
-
-import Axios from 'axios';
 
 class ListarPaciente extends Component {
     constructor() {
         super();
         this.state = {
             lista: [],
-            nome: "",
-            nascimento: "",
+            pacienteNome: "",
+            dataNascimento: "",
             endereco: "",
             cep: "",
             cpf: "",
@@ -27,14 +25,28 @@ class ListarPaciente extends Component {
         this.atualizaEstadoTelefone = this.atualizaEstadoTelefone.bind(this);
 
     }
+    
+    ListaPaciente(){
+        fetch('http://192.168.3.86:5000/api/Pacientes')
+          .then(resposta => resposta.json())
+          .then(data => this.setState({lista : data}))
+          .catch((erro) => console.log(erro))
+    }
+  
+    componentDidMount() {
+        this.ListaPaciente();
+    }
 
+    atualizaEstadoLista(event) {
+        this.setState({lista: event.target.value});
+    }
 
     atualizaEstadoNome(event) {
-        this.setState({nome: event.target.value});
+        this.setState({pacienteNome: event.target.value});
     }
 
     atualizaEstadoNascimento(event) {
-        this.setState({nascimento: event.target.value});
+        this.setState({dataNascimento: event.target.value});
     }
 
     atualizaEstadoEndereco(event) {
@@ -57,45 +69,28 @@ class ListarPaciente extends Component {
         this.setState({telefone: event.target.value});
     }
 
-    ListaPaciente(event) {
-        event.preventDefault();
-
-        let listaPaciente = {
-            lista: this.state.lista,
-            pacienteNome: this.state.nome,
-            dataNascimento: this.state.nascimento,
-            endereco: this.state.endereco,
-            cep: this.state.cep,
-            cpf: this.state.cpf,
-            rg: this.state.rg,
-            telefone: this.state.telefone
-        };
-
-        axios.get("http://192.168.3.86:5000/api/Pacientes", listaPaciente);
-
-        console.log(listaPaciente); 
-    }
-
-    componentDidMount(){
-        this.ListaPaciente();
-    }
-
-
     render() {
         return (
             <section className="">
                 <h2>Pacientes</h2>
                 <table className="table-list">
-                    <thead>
+                    <thead className="table-list__head">
                         <tr>
-                            <th>{this.state.nome}</th>
+                            <th>Nome do Paciente</th>
+                            <th>Data de Nascimento</th>
+                            <th>Endereço</th>
+                            <th>CEP</th>
+                            <th>CPF</th>
+                            <th>RG</th>
+                            <th>Telefone</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="table-list__body">
                         {
                             this.state.lista.map(function(listaPaciente){
                                 return(
                                     <tr key={listaPaciente.id}>
+                                        <td>{listaPaciente.pacienteNome}</td>
                                         <td>{listaPaciente.dataNascimento}</td>
                                         <td>{listaPaciente.endereco}</td>
                                         <td>{listaPaciente.cep}</td>

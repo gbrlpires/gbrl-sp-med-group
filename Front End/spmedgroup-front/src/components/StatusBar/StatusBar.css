@@ -3,7 +3,7 @@
 }
 
 .status-bar-container {
-    border-bottom: solid 1px var(--border-color);
+    border-bottom: var(--border);
     padding: 2% 0 10px 0 ;
 }
 

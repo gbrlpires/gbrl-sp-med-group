@@ -8,7 +8,9 @@
 
 /* Variables */
 :root {
-    --border-color: #CCCCCC;
+    --border: 1px solid #CCCCCC;
+    --border-radius: 4px;
     --text-color: #808080;
+    --title-color: #1B8DED;
 }
 

@@ -10,6 +10,8 @@ import ButtonA from '../../components/Button/_ButtonA/ButtonA';
 import Header from '../../components/Header/Header';
 import StatusBar from '../../components/StatusBar/StatusBar';
 import CadastrarPaciente from '../../components/Form/__CadastrarPaciente/CadastrarPaciente';
+import ListarPaciente from '../../components/Lists/__ListarPaciente/ListarPaciente';
+
 
 
 
@@ -21,6 +23,7 @@ class App extends Component {
             <Header/>
             <StatusBar />
             <CadastrarPaciente />
+            <ListarPaciente />
 
         </div>
       </div>
