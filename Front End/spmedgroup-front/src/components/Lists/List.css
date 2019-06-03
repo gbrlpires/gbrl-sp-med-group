@@ -1,10 +1,37 @@
-.table-list {
-    border: var(--border);
-    border-radius: var(--border-radius);
+.list {
+    width: 50%;
 }
 
-.table-list__head {
+.list__title {
+    font-size: 1.2em;
+    color: var(--title-color);
+
+    margin: 0 2%;
+
+}
+
+.list__content {
+    padding: 6%;
+    margin: 5% 2%;
+
+    border: var(--border);
+    border-radius: var(--border-radius);
+    border-left: var(--border-side);
+
+    box-shadow: var(--shadow);
+ 
+}
+
+.list__item--title {
     color: var(--title-color);
     text-transform: uppercase;
+}
+
+.list__item--info {
+    color: var(--text-color);
+    text-align: left;
+    font-size: .9em;
+    display: block;
+    margin-bottom: 18px;
 }
 

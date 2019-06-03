@@ -71,38 +71,49 @@ class ListarPaciente extends Component {
 
     render() {
         return (
-            <section className="">
-                <h2>Pacientes</h2>
-                <table className="table-list">
-                    <thead className="table-list__head">
-                        <tr>
-                            <th>Nome do Paciente</th>
-                            <th>Data de Nascimento</th>
-                            <th>Endereço</th>
-                            <th>CEP</th>
-                            <th>CPF</th>
-                            <th>RG</th>
-                            <th>Telefone</th>
-                        </tr>
-                    </thead>
-                    <tbody className="table-list__body">
+            <section>
+                <div className="list wrapper">
+                    <h2 className="list__title">Pacientes</h2>
+                    <div>
                         {
-                            this.state.lista.map(function(listaPaciente){
+                            this.state.lista.map(function(listaPaciente)
+                            {
                                 return(
-                                    <tr key={listaPaciente.id}>
-                                        <td>{listaPaciente.pacienteNome}</td>
-                                        <td>{listaPaciente.dataNascimento}</td>
-                                        <td>{listaPaciente.endereco}</td>
-                                        <td>{listaPaciente.cep}</td>
-                                        <td>{listaPaciente.cpf}</td>
-                                        <td>{listaPaciente.rg}</td>
-                                        <td>{listaPaciente.telefone}</td>
-                                    </tr>
+                                    <ul key={listaPaciente.id} className="list__content">
+                                        <li className="list__item">
+                                            <h4 className="list__item--title">Nome do Paciente</h4>
+                                            <p className="list__item--info">{listaPaciente.pacienteNome}</p>
+                                        </li>
+                                        <li className="list__item">
+                                            <h4 className="list__item--title">Data de nascimento</h4>
+                                            <p className="list__item--info">{listaPaciente.dataNascimento}</p>
+                                        </li>
+                                        <li className="list__item">
+                                            <h4 className="list__item--title">Endereço</h4>
+                                            <p className="list__item--info">{listaPaciente.endereco}</p>
+                                        </li>
+                                        <li className="list__item">
+                                            <h4 className="list__item--title">CEP</h4>
+                                            <p className="list__item--info">{listaPaciente.cep}</p>
+                                        </li>
+                                        <li className="list__item">
+                                            <h4 className="list__item--title">CPF</h4>
+                                            <p className="list__item--info">{listaPaciente.cpf}</p>
+                                        </li>
+                                        <li className="list__item">
+                                            <h4 className="list__item--title">RG</h4>
+                                            <p className="list__item--info">{listaPaciente.rg}</p>
+                                        </li>
+                                        <li className="list__item">
+                                            <h4 className="list__item--title">telefone</h4>
+                                            <p className="list__item--info">{listaPaciente.telefone}</p>
+                                        </li>
+                                    </ul>
                                 );
                             })
                         }
-                    </tbody>
-                </table>
+                    </div>
+                </div>                     
             </section>
         );
     }

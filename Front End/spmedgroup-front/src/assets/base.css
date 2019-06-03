@@ -12,5 +12,7 @@
     --border-radius: 4px;
     --text-color: #808080;
     --title-color: #1B8DED;
+    --border-side: 8px solid #28F2D8;
+    --shadow: 5px 5px 16px -10px rgb(223, 223, 223);
 }
 
