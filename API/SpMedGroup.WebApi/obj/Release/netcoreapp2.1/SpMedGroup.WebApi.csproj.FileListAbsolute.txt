@@ -1,0 +1,14 @@
+C:\Users\33938222840\Documents\Senai\Senai Desenvolvimento_2019_1st2\gbrl-sp-med-group\API\SpMedGroup.WebApi\bin\Release\netcoreapp2.1\SpMedGroup.WebApi.deps.json
+C:\Users\33938222840\Documents\Senai\Senai Desenvolvimento_2019_1st2\gbrl-sp-med-group\API\SpMedGroup.WebApi\bin\Release\netcoreapp2.1\SpMedGroup.WebApi.runtimeconfig.json
+C:\Users\33938222840\Documents\Senai\Senai Desenvolvimento_2019_1st2\gbrl-sp-med-group\API\SpMedGroup.WebApi\bin\Release\netcoreapp2.1\SpMedGroup.WebApi.runtimeconfig.dev.json
+C:\Users\33938222840\Documents\Senai\Senai Desenvolvimento_2019_1st2\gbrl-sp-med-group\API\SpMedGroup.WebApi\bin\Release\netcoreapp2.1\SpMedGroup.WebApi.dll
+C:\Users\33938222840\Documents\Senai\Senai Desenvolvimento_2019_1st2\gbrl-sp-med-group\API\SpMedGroup.WebApi\bin\Release\netcoreapp2.1\SpMedGroup.WebApi.pdb
+C:\Users\33938222840\Documents\Senai\Senai Desenvolvimento_2019_1st2\gbrl-sp-med-group\API\SpMedGroup.WebApi\obj\Release\netcoreapp2.1\SpMedGroup.WebApi.csprojAssemblyReference.cache
+C:\Users\33938222840\Documents\Senai\Senai Desenvolvimento_2019_1st2\gbrl-sp-med-group\API\SpMedGroup.WebApi\obj\Release\netcoreapp2.1\SpMedGroup.WebApi.csproj.CoreCompileInputs.cache
+C:\Users\33938222840\Documents\Senai\Senai Desenvolvimento_2019_1st2\gbrl-sp-med-group\API\SpMedGroup.WebApi\obj\Release\netcoreapp2.1\SpMedGroup.WebApi.RazorAssemblyInfo.cache
+C:\Users\33938222840\Documents\Senai\Senai Desenvolvimento_2019_1st2\gbrl-sp-med-group\API\SpMedGroup.WebApi\obj\Release\netcoreapp2.1\SpMedGroup.WebApi.RazorAssemblyInfo.cs
+C:\Users\33938222840\Documents\Senai\Senai Desenvolvimento_2019_1st2\gbrl-sp-med-group\API\SpMedGroup.WebApi\obj\Release\netcoreapp2.1\SpMedGroup.WebApi.AssemblyInfoInputs.cache
+C:\Users\33938222840\Documents\Senai\Senai Desenvolvimento_2019_1st2\gbrl-sp-med-group\API\SpMedGroup.WebApi\obj\Release\netcoreapp2.1\SpMedGroup.WebApi.AssemblyInfo.cs
+C:\Users\33938222840\Documents\Senai\Senai Desenvolvimento_2019_1st2\gbrl-sp-med-group\API\SpMedGroup.WebApi\obj\Release\netcoreapp2.1\SpMedGroup.WebApi.RazorTargetAssemblyInfo.cache
+C:\Users\33938222840\Documents\Senai\Senai Desenvolvimento_2019_1st2\gbrl-sp-med-group\API\SpMedGroup.WebApi\obj\Release\netcoreapp2.1\SpMedGroup.WebApi.dll
+C:\Users\33938222840\Documents\Senai\Senai Desenvolvimento_2019_1st2\gbrl-sp-med-group\API\SpMedGroup.WebApi\obj\Release\netcoreapp2.1\SpMedGroup.WebApi.pdb
