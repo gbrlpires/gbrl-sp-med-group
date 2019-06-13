@@ -1,5 +1,5 @@
 .form {
-    width: 40%;
+    min-width: 40%;
     /* text-align: center; */
 
 
@@ -30,7 +30,7 @@ label {
 
 .input-text {
     color: #1B8DED;
-    width: 100%;
+    width: 90%;
     height: 34px;
     padding: 2%;
     border: var(--border);
